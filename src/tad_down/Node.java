@@ -10,4 +10,13 @@ public class Node {
         this.next = null;
         this.prev = this;
     }
+
+    @Override
+    public String toString() {
+        return "" + data;
+    }
+
+    public Node getNext() {
+        return next;
+    }
 }

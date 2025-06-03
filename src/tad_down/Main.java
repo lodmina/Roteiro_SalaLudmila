@@ -9,11 +9,11 @@ public class Main {
         list.insertOrdered(20);
         list.insertOrdered(40);
 
-        list.printForward();  // Esperado: 10 20 30 40
+        System.out.print(list.printForward());  // Esperado: 10 20 30 40
         list.printBackward(); // Esperado: 40 30 20 10
 
         list.remove(20);
-        list.printForward();  // Esperado: 10 30 40
-        list.printBackward(); // Esperado: 40 30 10
+        System.out.print(list.printForward());  // Esperado: 10 30 40
+        System.out.print(list.printBackward()); // Esperado: 40 30 10
     }
 }

@@ -1,7 +1,11 @@
 package tad_down;
 
+/**
+ * Lista que insere os elementos ordenados pelo seus
+ * respectivos valores armazenados no campo data de cada Node
+ */
 public class DoublyLinkedList {
-    private Node head;
+    public Node head;
 
     public DoublyLinkedList() {
         head = null;
@@ -31,27 +35,29 @@ public class DoublyLinkedList {
         }
     }
 
-    public void printForward() {
+    public String printForward() {
+        String output = "";
         Node current = head;
-        System.out.print("Lista (frente): ");
+        output += "Lista (frente): ";
         while (current != null) {
-            System.out.print(current.data + " ");
+            output += (current.data + " ");
             current = current.next;
         }
-        System.out.println();
+        return output + "\n";
     }
 
-    public void printBackward() {
+    public String printBackward() {
         Node current = head;
+        String output = "Lista (trás): ";
         while (current != null) {
             current = current.next;
         }
-        System.out.print("Lista (trás): ");
+
         while (current != null) {
-            System.out.print(current.data + " ");
+            output += (current.data + " ");
             current = current.prev;
         }
-        System.out.println();
+        return output + "\n";
     }
 
     public void remove(int data) {
