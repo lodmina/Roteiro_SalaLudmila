@@ -1,5 +1,7 @@
 # Roteiro_Sala
-Aluna: Ludmila Maria Pereira da Silva
+Alunas: Ludmila Maria Pereira da Silva
+        Laryssa Finizola
+
 
 Roteiro de sala:
 1. Encontre os problemas e faça um relatório indicando problemas e soluções - OK
