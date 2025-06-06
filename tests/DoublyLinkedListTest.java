@@ -26,11 +26,15 @@ public class DoublyLinkedListTest {
     }
 
     @Test
-    public void test_printForward_when() {
+    public void test_printForward_when() { // corrigido
         list.insertOrdered(10);
         list.insertOrdered(20);
         list.insertOrdered(30);
         list.insertOrdered(40);
-        list.printForward();
+
+        // corrigindo com assert
+        assertEquals("Lista (frente): 10 20 30 40\n", list.printForward());
+        assertEquals("Lista (trás): 40 30 20 10\n", list.printBackward());
+
     }
 }

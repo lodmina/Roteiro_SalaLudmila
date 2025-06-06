@@ -22,7 +22,7 @@ public class DoublyLinkedList {
             head = newNode;
         } else {
             Node current = head;
-            while (current.next != null && current.next.data >= data) {
+            while (current.next != null && current.next.data <= data) { // corrigido
                 current = current.next;
             }
 
@@ -46,19 +46,23 @@ public class DoublyLinkedList {
         return output + "\n";
     }
 
-    public String printBackward() {
+    public String printBackward() { // corrigido
+        if (head == null) return "Lista (trás):\n";
+
         Node current = head;
-        String output = "Lista (trás): ";
-        while (current != null) {
+        while(current.next != null){
             current = current.next;
         }
 
-        while (current != null) {
-            output += (current.data + " ");
+        String output = "Lista (trás): ";
+        while(current != null) {
+            output += current.data + " ";
             current = current.prev;
         }
-        return output + "\n";
+
+        return output.trim() + "\n";
     }
+
 
     public void remove(int data) {
         Node current = head;
